@@ -15,11 +15,16 @@
 #include "WProgram.h"
 #endif
 
+#ifndef ENUM_CONVERSION
+#define ENUM_CONVERSION 1
+
 template<typename Enumerator>
 uint8_t getEnumValue(const Enumerator& enumType)
 {
 	return static_cast<uint8_t>(enumType);
 }
+
+#endif // ENUM_CONVERSION
 
 class TM1637
 {
